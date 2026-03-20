@@ -1,0 +1,13 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+*.code-workspace
+
+# Arquivos de referência / rascunho
+*.psd
+*.ai
+*.sketch

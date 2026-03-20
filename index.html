@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cardápio completo da Pizza da Villa — pizzas especiais, entradas, massas, bebidas e mais." />
+  <title>Cardápio — Pizza da Villa</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       HERO
+  ================================================================ -->
+  <header class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="hero__conteudo">
+      <div class="hero__logo-wrap">
+        <img
+          src="img/logo-black.png"
+          alt="Logo Pizza da Villa"
+          class="hero__logo"
+          loading="eager"
+        />
+      </div>
+      <p class="hero__subtitulo">Cardápio</p>
+      <h1 class="hero__titulo">Pizza da Villa</h1>
+      <a href="#cardapio" class="hero__btn" aria-label="Rolar para o cardápio">
+        Ver cardápio
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 3v10M3 9l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <svg class="hero__divider" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,48 C360,0 1080,80 1440,32 L1440,64 L0,64 Z" fill="#FDF8EF"/>
+    </svg>
+  </header>
+
+  <!-- ================================================================
+       CARDÁPIO PRINCIPAL
+  ================================================================ -->
+  <main class="cardapio" id="cardapio">
+
+    <!-- SVG reutilizável para placeholder (ícone de prato/garfo) -->
+    <!-- Injetado via CSS + inline, referenciado por cada .item-prato__placeholder -->
+
+    <!-- ---- ENTRADAS ---- -->
+    <section class="secao" id="entradas" aria-labelledby="titulo-entradas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-entradas">Entradas</h2>
+      </div>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/crostini.jpg" alt="Crostini" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Crostini</p>
+            <p class="item-prato__desc">Lascas de massa branca fresquinhas, servidas com molho fresco de tomate.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Lascas de Provolone</p>
+            <p class="item-prato__desc">Fatias de provolone finas e crocantes, salpicadas com orégano, assadas no forno à lenha.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/bruschetta.jpg" alt="Bruschetta Tradicional" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Bruschetta Tradicional</p>
+            <p class="item-prato__desc">Fatias de pão italiano artesanal tostadas no forno a lenha, tomate fresco, azeite, alho e manjericão. <em>(5 unidades)</em></p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/burrata.jpg" alt="Burrata" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Burrata</p>
+            <p class="item-prato__desc">Queijo de búfala fresco e cremoso, com saladinha de tomate, manjericão e rúcula hidropônica. Acompanha pão italiano artesanal.</p>
+            <span class="badge-sazonal">Produto sazonal — sob consulta</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- MINI CALZONES ---- -->
+    <section class="secao" id="mini-calzones" aria-labelledby="titulo-calzones">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-calzones">Mini Calzones</h2>
+      </div>
+
+      <p class="secao__nota">Massa de pizza bem fina, fechada, com recheio de sua preferência. Pode ser servido fatiado ou inteiro.</p>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-calabresa.jpg" alt="Mini Calzone Calabresa" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Calabresa</p>
+            <p class="item-prato__desc">Calabresa, tomate e cebola.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Portuguesa</p>
+            <p class="item-prato__desc">Presunto, palmito, cebola, milho, mussarela e azeitona.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Margherita</p>
+            <p class="item-prato__desc">Mussarela de búfala com tomate seco e manjericão.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Abobrinha</p>
+            <p class="item-prato__desc">Abobrinha refogada, cebola, mussarela e parmesão.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Escarola</p>
+            <p class="item-prato__desc">Escarola refogada no alho e mussarela.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- PIZZAS ESPECIAIS ---- -->
+    <section class="secao" id="pizzas-especiais" aria-labelledby="titulo-pizzas-especiais">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-pizzas-especiais">Pizzas Especiais</h2>
+      </div>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Bocaina</p>
+            <p class="item-prato__desc">Molho de tomate coberto com catupiry, lâminas de provolone e gratinada com parmesão.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Capelinha</p>
+            <p class="item-prato__desc">Molho de tomate com cobertura de 4 queijos: mussarela, catupiry, provolone e gorgonzola.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Itatiaia</p>
+            <p class="item-prato__desc">Molho de tomate, cebola em rodelas, alho (cru ou frito), mussarela e parmesão.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Jardim das Rosas</p>
+            <p class="item-prato__desc">Lombo canadense sobre molho de tomate, mussarela e chutney de manga (à parte) — típico de Penedo.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-luna.jpg" alt="Villa Luna" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Luna</p>
+            <p class="item-prato__desc">Molho de tomate, mussarela de búfala fatiada, tomate em rodelas e basílico.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Mauá</p>
+            <p class="item-prato__desc">Lombo canadense sobre molho de tomate, cebola em rodelas com cobertura de catupiry.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-maringa.jpg" alt="Villa Maringá" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Maringá</p>
+            <p class="item-prato__desc">Molho de tomate, mussarela de búfala, rúcula fresca e tomates secos.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-maromba.jpg" alt="Villa Maromba" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Maromba</p>
+            <p class="item-prato__desc">Cogumelos frescos da região refogados na manteiga e shoyo, sobre molho de tomate e mussarela de búfala.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-martinelli.jpg" alt="Villa Martinelli" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Martinelli</p>
+            <p class="item-prato__desc">Rodelas de pepperoni sobre mussarela, molho de tomate e pimentão verde.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Penedo</p>
+            <p class="item-prato__desc">Abobrinha ralada sobre mussarela, molho de tomate, cebola em fatias, gratinada com parmesão.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-resende.jpg" alt="Villa Resende" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Resende</p>
+            <p class="item-prato__desc">Molho de tomate, mussarela de búfala, orégano e lascas de presunto parma. Acompanha rúcula orgânica.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/pizza-serrinha.jpg" alt="Villa Serrinha" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Villa Serrinha</p>
+            <p class="item-prato__desc">Molho de tomate, brócolis ao alho e óleo, cobertura de catupiry e cubos de bacon.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- PIZZAS DOCES E SOBREMESAS ---- -->
+    <section class="secao" id="sobremesas" aria-labelledby="titulo-sobremesas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-sobremesas">Pizzas Doces &amp; Sobremesas</h2>
+      </div>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Pizza de Banana com Canela e Açúcar</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Pizza de Banana com Chocolate</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Pizza de Chocolate</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Petit Gateau</p>
+            <p class="item-prato__desc">Com sorvete de creme e cobertura de chocolate.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Brownie</p>
+            <p class="item-prato__desc">Com sorvete de creme e cobertura de chocolate.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/banana-flambada.jpg" alt="Banana Flambada" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Banana Flambada</p>
+            <p class="item-prato__desc">Acompanha sorvete de creme.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Sorvete</p>
+            <p class="item-prato__desc">2 bolas (creme ou doce de leite).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- MASSAS ---- -->
+    <section class="secao" id="massas" aria-labelledby="titulo-massas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-massas">Massas</h2>
+      </div>
+
+      <p class="secao__nota">Nossas massas são frescas, produzidas artesanalmente em nosso Pastifício Armazém Villa do Trigo (@avilladotrigo) com ingredientes nobres (farinha italiana e ovos selecionados), seguindo receitas e procedimentos clássicos italianos.</p>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Fettuccine ao molho de queijo</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/fettuccine-pesto.jpg" alt="Fettuccine ao molho pesto de basílico" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Fettuccine ao molho pesto de basílico</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/spaguetti-bolonhesa.jpg" alt="Spaguetti ao molho à bolonhesa" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Spaguetti ao molho à bolonhesa</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Penne ao molho sugo</p>
+            <p class="item-prato__desc">Disponível também em opção sem glúten.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Kids <small>(até 12 anos)</small></p>
+            <p class="item-prato__desc">½ porção de spaguetti ao molho sugo ou à bolonhesa.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- LASANHAS E RECHEADOS ---- -->
+    <section class="secao" id="lasanhas" aria-labelledby="titulo-lasanhas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-lasanhas">Lasanhas &amp; Recheados</h2>
+      </div>
+
+      <div class="lista-pratos">
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Lasanha Tradicional</p>
+            <p class="item-prato__desc">Recheada com mussarela e fatias de presunto ao molho sugo, gratinada ao forno.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Lasanha à Bolonhesa</p>
+            <p class="item-prato__desc">Recheada com molho à bolonhesa da casa, mussarela e parmesão, gratinada ao forno.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/rondelli.jpg" alt="Rondelli de Parma e Búfala" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Rondelli de Parma e Búfala</p>
+            <p class="item-prato__desc">Recheado com mussarela de búfala e presunto parma, molho branco, gratinado ao forno.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Rondelli 4 Queijos</p>
+            <p class="item-prato__desc">Recheado com mussarela, cream cheese, gorgonzola e parmesão, molho branco, gratinado ao forno.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__thumb">
+            <img src="img/pratos/ravioli.jpg" alt="Raviolle da Villa" loading="lazy" />
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Raviolle da Villa</p>
+            <p class="item-prato__desc">Recheado com mussarela e manjericão, ao molho sugo, gratinado ao forno.</p>
+          </div>
+        </div>
+
+        <div class="item-prato">
+          <div class="item-prato__placeholder" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="item-prato__info">
+            <p class="item-prato__nome">Raviolle de Truta</p>
+            <p class="item-prato__desc">Recheado com truta defumada, na manteiga de amêndoas.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---- BEBIDAS NÃO ALCOÓLICAS ---- -->
+    <section class="secao" id="bebidas" aria-labelledby="titulo-bebidas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-bebidas">Bebidas não Alcoólicas</h2>
+      </div>
+
+      <ul class="lista-simples">
+        <li><strong>Água Mineral</strong> — Com ou Sem gás</li>
+        <li><strong>Refrigerantes e Tônicas</strong> — Lata</li>
+        <li><strong>H2OH</strong></li>
+        <li><strong>Suco Delvalle</strong> — Uva e Pêssego</li>
+        <li><strong>Sucos Naturais</strong> — Abacaxi, Laranja</li>
+        <li><strong>Suco de Uva Integral Serra Gaúcha</strong> — Jarra 500ml</li>
+        <li><strong>Soda Italiana</strong> — Romã, Cranberry, Granadine, Tangerina, Maçã Verde, Limão Siciliano, Morango</li>
+      </ul>
+    </section>
+
+    <!-- ---- CERVEJAS E CHOPP ---- -->
+    <section class="secao" id="cervejas" aria-labelledby="titulo-cervejas">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-cervejas">Cervejas &amp; Chopp</h2>
+      </div>
+
+      <ul class="lista-simples">
+        <li><strong>Long Neck</strong> — Budweiser, Heineken, Stella, Spaten</li>
+        <li><strong>Therezópolis Gold</strong> — 500ml</li>
+        <li><strong>Heineken</strong> — 600ml</li>
+        <li><strong>Chopp Artesanal Penelope</strong> — PILSEN 350ml</li>
+      </ul>
+    </section>
+
+    <!-- ---- DESTILADOS ---- -->
+    <section class="secao" id="destilados" aria-labelledby="titulo-destilados">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-destilados">Destilados &amp; Drinques</h2>
+      </div>
+
+      <ul class="lista-simples">
+        <li><strong>Caipirinha</strong> — Velho Barreiro</li>
+        <li><strong>Caipirinha</strong> — Sagatiba</li>
+        <li><strong>Caipiroska</strong> — Smirnoff</li>
+        <li><strong>Caipiroska</strong> — Absolut</li>
+        <li><strong>Licor</strong> — Cointreau / Licor 43</li>
+        <li><strong>Whisky Red Label</strong> — dose</li>
+        <li><strong>Whisky Black Label</strong> — dose</li>
+        <li><strong>Cachaça Ouro</strong> — dose</li>
+        <li><strong>Gin Tônica</strong></li>
+        <li><strong>Aperol Spritz</strong></li>
+      </ul>
+    </section>
+
+    <!-- ---- VINHOS ---- -->
+    <section class="secao" id="vinhos" aria-labelledby="titulo-vinhos">
+      <div class="secao__header">
+        <h2 class="secao__titulo" id="titulo-vinhos">Vinhos</h2>
+      </div>
+
+      <ul class="lista-simples">
+        <li>Solicite nossa carta.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="rodape">
+    <img
+      src="img/logo-black.png"
+      alt="Logo Pizza da Villa"
+      class="rodape__logo"
+      loading="lazy"
+    />
+    <p class="rodape__nome">Pizza da Villa</p>
+    <address class="rodape__info">
+      <p>Av. das Mangueiras, 1457 — Penedo, Itatiaia&nbsp;—&nbsp;RJ</p>
+      <p>CEP 27580-000</p>
+      <p class="rodape__tel">(24) 99317-4013</p>
+    </address>
+  </footer>
+
+</body>
+</html>

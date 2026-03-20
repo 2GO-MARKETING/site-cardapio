@@ -1,0 +1,463 @@
+/* ============================================================
+   PIZZA DA VILA — CARDÁPIO
+   Mobile-first | Paleta: Bege, Marrom, Branco
+   Fontes: Baloo 2 (títulos) + Inter (corpo)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bege:          #F5EDD9;
+  --bege-claro:    #FDF8EF;
+  --bege-medio:    #E8D8B8;
+  --marrom:        #6B3F1A;
+  --marrom-escuro: #3D2008;
+  --marrom-medio:  #8B5230;
+  --dourado:       #C9943A;
+  --branco:        #FFFFFF;
+  --cinza-foto:    #D4C9BA;
+  --texto:         #3D2008;
+  --texto-suave:   #7A5C3A;
+  --sombra:        rgba(61, 32, 8, 0.10);
+
+  --font-titulo: 'Baloo 2', 'Georgia', serif;
+  --font-corpo:  'Inter', 'Helvetica Neue', sans-serif;
+
+  --transicao: 0.22s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-corpo);
+  background-color: var(--bege-claro);
+  color: var(--texto);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-titulo);
+  color: var(--marrom-escuro);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  /* brilho baixo conforme solicitado */
+  filter: brightness(0.30) saturate(1.1);
+  /* sem z-index — fica abaixo por estar antes no DOM */
+}
+
+.hero__conteudo {
+  position: relative;
+  /* SEM z-index — evita criar stacking context isolado,
+     o que permitia o mix-blend-mode funcionar corretamente */
+  max-width: 480px;
+}
+
+/* Wrapper: define o espaço reservado e recorta o excesso */
+.hero__logo-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.4rem;
+  overflow: hidden;
+  /* Centraliza sem criar stacking context */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__logo {
+  /* transform: scale() aumenta visualmente SEM mover outros elementos */
+  width: 140px;
+  transform: scale(1.9);
+  transform-origin: center center;
+  mix-blend-mode: screen;
+  flex-shrink: 0;
+}
+
+.hero__subtitulo {
+  font-family: var(--font-corpo);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 0.5rem;
+}
+
+.hero__titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(2.6rem, 9vw, 4.4rem);
+  font-weight: 800;
+  color: var(--branco);
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.65);
+  margin-bottom: 2.2rem;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--branco);
+  color: var(--marrom-escuro);
+  font-family: var(--font-corpo);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 0.85rem 2.1rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: background var(--transicao), color var(--transicao), transform var(--transicao);
+}
+
+.hero__btn:hover {
+  background: var(--dourado);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+
+.hero__btn svg {
+  transition: transform var(--transicao);
+}
+.hero__btn:hover svg {
+  transform: translateY(3px);
+}
+
+/* Onda decorativa */
+.hero__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* sem z-index — vem depois no DOM, fica na frente */
+}
+
+/* ============================================================
+   CARDÁPIO — CONTAINER GERAL
+   ============================================================ */
+.cardapio {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+/* ============================================================
+   CABEÇALHO DE SEÇÃO
+   ============================================================ */
+.secao {
+  margin-bottom: 3rem;
+}
+
+.secao__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 2px solid var(--bege-medio);
+}
+
+.secao__titulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.3rem, 4vw, 1.65rem);
+  font-weight: 700;
+  color: var(--marrom);
+}
+
+/* Linha decorativa ao lado do título */
+.secao__header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bege-medio);
+}
+
+.secao__nota {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--texto-suave);
+  margin-bottom: 1.2rem;
+  background: var(--bege-medio);
+  border-left: 3px solid var(--dourado);
+  padding: 0.7rem 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ============================================================
+   LISTA DE PRATOS (layout em lista)
+   ============================================================ */
+.lista-pratos {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item-prato {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--bege-medio);
+  transition: background var(--transicao);
+}
+
+.item-prato:last-child {
+  border-bottom: none;
+}
+
+/* Thumbnail — foto real */
+.item-prato__thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--cinza-foto);
+}
+
+.item-prato__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.item-prato:hover .item-prato__thumb img {
+  transform: scale(1.07);
+}
+
+/* Thumbnail — placeholder (sem foto) */
+.item-prato__placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: var(--cinza-foto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a89880;
+}
+
+.item-prato__placeholder svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.6;
+}
+
+/* Conteúdo textual */
+.item-prato__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-prato__nome {
+  font-family: var(--font-titulo);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--marrom-escuro);
+  line-height: 1.25;
+  margin-bottom: 0.18rem;
+}
+
+.item-prato__desc {
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+  line-height: 1.55;
+}
+
+/* Badge sazonal */
+.badge-sazonal {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--branco);
+  background: var(--dourado);
+  padding: 0.18rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* ============================================================
+   LISTA SIMPLES (bebidas, destilados etc.)
+   ============================================================ */
+.lista-simples {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lista-simples li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--texto);
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--bege-medio);
+}
+
+.lista-simples li:last-child {
+  border-bottom: none;
+}
+
+.lista-simples li::before {
+  content: '—';
+  color: var(--dourado);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+.lista-simples li strong {
+  color: var(--marrom-escuro);
+  font-weight: 600;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.rodape {
+  background: var(--marrom-escuro);
+  color: var(--bege-claro);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.rodape__logo {
+  width: 72px;
+  margin: 0 auto 1rem;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.rodape__nome {
+  font-family: var(--font-titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bege);
+  margin-bottom: 0.75rem;
+}
+
+.rodape__info {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: rgba(245, 237, 217, 0.65);
+  line-height: 1.7;
+}
+
+.rodape__tel {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--dourado);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (min-width: 600px) {
+  .item-prato__thumb,
+  .item-prato__placeholder {
+    width: 86px;
+    height: 86px;
+  }
+
+  .item-prato__nome {
+    font-size: 1.05rem;
+  }
+
+  .item-prato__desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .cardapio {
+    padding: 4rem 2rem 6rem;
+  }
+
+  .hero__logo {
+    width: 160px;
+  }
+}
+
+/* ============================================================
+   ANIMAÇÃO FADE-UP NAS SEÇÕES
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.secao {
+  animation: fadeUp 0.45s ease both;
+}
+
+.secao:nth-child(1)  { animation-delay: 0.05s; }
+.secao:nth-child(2)  { animation-delay: 0.10s; }
+.secao:nth-child(3)  { animation-delay: 0.15s; }
+.secao:nth-child(4)  { animation-delay: 0.20s; }
+.secao:nth-child(5)  { animation-delay: 0.25s; }
+.secao:nth-child(6)  { animation-delay: 0.30s; }
+.secao:nth-child(7)  { animation-delay: 0.35s; }
+.secao:nth-child(8)  { animation-delay: 0.40s; }
+.secao:nth-child(9)  { animation-delay: 0.45s; }
+
+/* ============================================================
+   ACESSIBILIDADE
+   ============================================================ */
+:focus-visible {
+  outline: 3px solid var(--dourado);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, .hero__bg, .item-prato__thumb img {
+    transition: none !important;
+    animation: none !important;
+  }
+}
